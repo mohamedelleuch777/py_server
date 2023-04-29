@@ -1,0 +1,22 @@
+<config>
+    <host value="kirawebsite1:8080">
+        <directory path="/media/mohamedelleuch/7E9BCA88705638AE/prjt/python/RentWebsiteBackend/www/kira1" />
+        <rule action="replace">
+            <regex>^([^?]*)\??</regex>
+            <value>/index.html</value>
+        </rule>
+    </host>
+    <host value="maha:8080">
+        <directory path="./www/food" />
+        <rule action="replace" skip="existing">
+            <regex>^([^?]*)\??</regex>
+            <value>/index.html</value>
+        </rule>
+    </host>
+    <host value="api.kirawebsite:8080">
+        <directory path="/media/mohamedelleuch/7E9BCA88705638AE/prjt/python/RentWebsiteBackend/www/apiFolder" />
+        <error>
+            <page code="404">error404.html</page>
+        </error>
+    </host>
+</config>
